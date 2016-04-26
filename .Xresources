@@ -1,38 +1,31 @@
-! grandshell color scheme
-! based on steckerhalter (grandshell-theme for emacs).
-! https://github.com/steckerhalter/grandshell-theme
+! Xresources file
+*foreground:	#FFFFFF
+*background:	#222222
+*cursorColor:	#5E468C
+!black
+*color0:  #333333
+*color8:  #3D3D3D
+!red
+*color1:  #8C4665
+*color9:  #BF4D80
+!green
+*color2:  #287373
+*color10: #53A6A6
+!yellow
+*color3:  #7E5D7A
+*color11: #A270A3
+!blue
+*color4:  #395573
+*color12: #477AB3
+!magenta
+*color5:  #5E468C
+*color13: #7E62B3
+!cyan
+*color6:  #31658C
+*color14: #6096BF
+!white
+*color7:  #899CA1
+*color15: #C0C0C0
 
-*background: #000000
-*foreground: #bebebe 
-*cursorColor: #aa2255  
-
-! black + red
-*color0: #000000
-*color1: #f25a5a
-! green + yellow
-*color2: #77bb33
-*color3: #efc334
-! blue + purple
-*color4: #5555dd
-*color5: #C350FF
-! cyan + white
-*color6: #5af2ee
-*color7: #bebebe
-! bright-black + bright-red
-*color8: #222222
-*color9: #ffbbbb
-! bright-green + bright-yellow
-*color10: #dcf692
-*color11: #f6df92
-! bright-blue + bright-purple
-*color12: #b2baf6
-*color13: #f09fff
-! bright-cyan + bright-white
-*color14: #5af2ee
-*color15: #eeeeee
-
-! xterm -------
-
-xterm*dynamicColors:	true
-xterm*termName: 	xterm-256color
-xterm*locale: 		true
+URxvt.scrollBar: false
+URxvt*font: -*-terminus-*-*-*-*-12-120-*-*-*-*-*-*

@@ -15,8 +15,8 @@ unsetopt beep notify
 
 export GOPATH=$HOME/Code/go
 eval $(ssh-agent) > /dev/null
-alias kazuma="echo 'hai kazuma, desu'"
-alias :wq="echo 'You're a fucking retard."
+alias kazuma="echo 'はい, かずま です'"
+alias :wq="echo You\'re a fucking retard."
 alias display="~/Scripts/displays.sh"
 alias lock="~/Scripts/lock.sh"
 alias backup="~/Scripts/backup.sh"

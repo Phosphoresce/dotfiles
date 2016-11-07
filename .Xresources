@@ -29,3 +29,5 @@
 
 URxvt.scrollBar: false
 URxvt*font: -*-terminus-*-*-*-*-12-120-*-*-*-*-*-*
+URxvt.inputMethod: ibus
+URxvt.PreeditType: OverTheSpot

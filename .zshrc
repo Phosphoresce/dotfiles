@@ -18,6 +18,7 @@ eval $(ssh-agent) > /dev/null
 alias kazuma="echo 'はい, かずま です'"
 alias :wq="echo You\'re a fucking retard."
 alias display="~/Scripts/displays.sh"
+alias loicme="~/Scripts/loicme.sh"
 alias lock="~/Scripts/lock.sh"
 alias backup="~/Scripts/backup.sh"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

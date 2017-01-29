@@ -18,7 +18,7 @@ fi
 # test network connection, if no connectivity do not continue
 if ! [[ ping -q -c 1 -W 1 archlinux.org >/dev/null ]]; then
 	echo "You need to connect to the internet to install Arch."
-	return
+	exit 1
 fi
 
 # set up ntp and wait for ntp to sync
@@ -35,7 +35,7 @@ fi
 
 # set up partition table
 # if uefi
-if [[ $BOOT == uefi ]]
+if [[ $BOOT == "uefi" ]]; then
 	parted /dev/$DRIVE \
 		mklabel gpt \
 		mkpart ESP fat32 1MiB 513MiB \
@@ -128,4 +128,3 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # finally restart
 echo "Time to reboot!"
 echo "Type 'exit', 'umount -R /mnt', and 'reboot' when you are ready."
-return

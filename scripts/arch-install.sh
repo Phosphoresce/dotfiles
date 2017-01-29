@@ -16,7 +16,7 @@ else
 fi
 
 # test network connection, if no connectivity do not continue
-if ! [[ `ping -q -c 1 -W 1 archlinux.org >/dev/null` ]]; then
+if ! ping -q -c 1 -W 1 archlinux.org >/dev/null; then
 	echo "You need to connect to the internet to install Arch."
 	exit 1
 fi
@@ -26,7 +26,8 @@ timedatectl set-ntp true
 
 # select which disks to partition
 DRIVE=$(lsblk -o name | grep -m1 sd)
-echo "Found installation drive: $DRIVE\n Is this correct? y/n: "
+echo "Found installation drive: $DRIVE"
+echo "Is this correct? y/n: "
 read -n 1 CHECK
 if [[ $CHECK == "n" ]]; then
 	echo "Enter the correct drive. (sdX): "

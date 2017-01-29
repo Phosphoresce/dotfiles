@@ -16,7 +16,7 @@ else
 fi
 
 # test network connection, if no connectivity do not continue
-if ! [[ ping -q -c 1 -W 1 archlinux.org >/dev/null ]]; then
+if ! [[ `ping -q -c 1 -W 1 archlinux.org >/dev/null` ]]; then
 	echo "You need to connect to the internet to install Arch."
 	exit 1
 fi

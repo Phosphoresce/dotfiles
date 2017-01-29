@@ -18,12 +18,12 @@ echo "127.0.1.1 $HOSTNAME.localdomain $HOSTNAME" >> /etc/hosts
 
 # usernames and passwords
 echo "Choose a user name: "
-read $USER
-useradd -m -s /bin/zsh $USER
+read NEWUSER
+useradd -m -s /bin/zsh $NEWUSER
 echo "Enter a secure root password."
 passwd
 echo "Enter a secure user password."
-passwd $USER
+passwd $NEWUSER
 
 # Boot loader
 # if uefi

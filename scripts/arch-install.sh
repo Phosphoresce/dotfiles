@@ -113,7 +113,7 @@ read $USER
 useradd -m -s /bin/zsh $USER
 echo "Enter a secure root password."
 passwd
-echo "Enter a secure user password"
+echo "Enter a secure user password."
 passwd $USER
 
 # Boot loader
@@ -126,5 +126,6 @@ grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # finally restart
-echo "Time to reboot!\nType 'exit', 'umount -R /mnt', and 'reboot' when you are ready."
+echo "Time to reboot!"
+echo "Type 'exit', 'umount -R /mnt', and 'reboot' when you are ready."
 return

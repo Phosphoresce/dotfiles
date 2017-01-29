@@ -85,7 +85,7 @@ pacstrap /mnt base base-devel zsh vim sudo git
 # -------------
 
 # Fstab
-genfstab -U /mnt >> /mnt/etc/fstab
+genfstab -U /mnt > /mnt/etc/fstab
 
 # Chroot
 cp chroot.sh /mnt/chroot.sh

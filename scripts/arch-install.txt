@@ -130,4 +130,4 @@ bash ~/Scripts/vim.sh
 sudo pacman -S virtualbox-host-modules-arch
 
 # if xorg
-sudo pacman -S xorg-server awesome xorg-xinit rxvt-unicode terminus-font
+sudo pacman -S xorg-server awesome xorg-xinit rxvt-unicode terminus-font ttf-dejavu

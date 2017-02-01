@@ -4,7 +4,9 @@
 
 theme = {}
 
-theme.font          = "terminus 8"
+-- Awesome apparently requires a TTF font for the bar.
+--theme.font          = "terminus 8"
+theme.font          = "dejavu 8"
 
 theme.bg_normal     = "#222222"
 theme.bg_focus      = "#333333"

@@ -14,4 +14,6 @@ call vundle#end()
 filetype plugin indent on
 :syntax on
 :set nu
+:set linebreak
+:set breakindent
 :colorscheme meta5

@@ -21,4 +21,5 @@ alias display="~/Scripts/displays.sh"
 alias loicme="~/Scripts/loicme.sh"
 alias lock="~/Scripts/lock.sh"
 alias backup="~/Scripts/backup.sh"
+alias vbox="/usr/bin/VBoxClient-all"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

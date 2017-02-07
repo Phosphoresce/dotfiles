@@ -199,7 +199,7 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
+            -- mylauncher,
             s.mytaglist,
             s.mypromptbox,
         },
@@ -209,7 +209,7 @@ awful.screen.connect_for_each_screen(function(s)
             mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
-            s.mylayoutbox,
+	    -- s.mylayoutbox,
         },
     }
 end)
@@ -270,7 +270,7 @@ globalkeys = awful.util.table.join(
         {description = "go back", group = "client"}),
 
     -- Standard program
-    awful.key({ modkey, "Control" }, "l",      function () awful.spawn("xscreensaver-command -lock") end,
+    awful.key({ "Control",        }, "l",      function () awful.spawn("xscreensaver-command -lock") end,
               {description = "lock the screen", group = "launcher"}),
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
@@ -429,6 +429,7 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
+		     size_hints_honor = false
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen
      }
     },

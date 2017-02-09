@@ -14,3 +14,7 @@ Compare files side by side
 
 Switch windows
 - ctrl+w
+
+Sort
+- :%sort
+- :26,48sort

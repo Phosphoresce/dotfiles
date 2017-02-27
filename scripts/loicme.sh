@@ -3,7 +3,7 @@ DRIVE=$(df | grep "/home" | grep -Eo "\/dev\/sd[a-z]{1,}?[0-9]{1,}")
 echo $DRIVE
 
 echo "Good night sweet prince."
-./lock.sh &
+~/Scripts/lock.sh &
 
 # Quick zero wipe followed by secure wipe. Un-comment to arm.
 #####dd if=/dev/zero of=$DRIVE bs=4096

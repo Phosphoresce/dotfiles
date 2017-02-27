@@ -4,3 +4,7 @@
 3. ensure this isnt malicious
 4. makepkg -sri
 5. profit
+
+# Method 2
+1. sudo pacman -S yaourt
+2. sudo yaourt -S <pkg>

@@ -14,7 +14,6 @@ setopt appendhistory
 unsetopt beep notify
 
 export GOPATH=$HOME/Code/go
-eval $(ssh-agent) > /dev/null
 if [[ -z "$TMUX" ]] && pgrep xinit; then
 	ID=$(tmux ls | grep -vm1 attached | cut -d: -f1)
 	if [[ -z "$ID" ]]; then

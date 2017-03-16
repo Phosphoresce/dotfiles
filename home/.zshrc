@@ -14,7 +14,7 @@ setopt appendhistory
 unsetopt beep notify
 
 export GOPATH=$HOME/Code/go
-if [[ -z "$TMUX" ]] && pgrep xinit; then
+if [[ -z "$TMUX" ]] && pgrep xinit >/dev/null; then
 	ID=$(tmux ls | grep -vm1 attached | cut -d: -f1)
 	if [[ -z "$ID" ]]; then
 		exec tmux new-session

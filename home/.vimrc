@@ -8,6 +8,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'rust-lang/rust.vim'
 Plugin 'b4b4r07/vim-hcl'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 

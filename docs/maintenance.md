@@ -13,6 +13,7 @@ Backup
 ------
 rsync
 `rsync -azq local remote:/path/to/backup`
+Note: rsync uses ssh by default to tranfer files remotely. Ensure sshd and rsyncd are running and ports 873 and 22 are forwarded.  
 
 package list
 `pacman -Qqe > ~/.pkgs`

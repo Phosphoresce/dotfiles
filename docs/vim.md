@@ -18,3 +18,6 @@ Switch windows
 Sort
 - :%sort
 - :26,48sort
+
+Find and Replace between lines
+- :4,6s/find/replace/g

@@ -18,6 +18,6 @@ Initiate the connection from the inside of the remote network to home.
 From remote:  
 `ssh -R 2222:localhost:22 home.domain.com`  
 
-Then connect to the other side of the shell from home.
+Then connect to the other side of the shell from home.  
 From home:  
 `ssh -p 2222 localhost`  

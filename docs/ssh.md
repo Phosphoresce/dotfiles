@@ -30,3 +30,8 @@ From remote:
 Then connect to the other side of the shell from home.  
 From home:  
 `ssh -p 2222 localhost`  
+
+**Troubleshooting**
+Make sure the public key and private key are correctly copied over to your target server.  
+Did you run `chmod 400 ~/.ssh/authorized_keys`?  
+Is the `~/.ssh directory` open to the world? Try running `chmod 600 ~/.ssh`.  

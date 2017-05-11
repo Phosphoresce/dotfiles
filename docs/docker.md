@@ -36,7 +36,6 @@ To enable the service:
 sudo cp registry.service /etc/systemd/system/
 sudo systemctl enable /etc/systemd/system/registry.service
 sudo systemctl start registry.service
-
 ```
 
 To view logs from the service:  

@@ -14,6 +14,8 @@ call vundle#end()
 
 filetype plugin indent on
 :syntax on
+:cnoremap w!! w !sudo tee % >/dev/null
+:inoremap jk <ESC>
 :set nu
 :set linebreak
 :set breakindent

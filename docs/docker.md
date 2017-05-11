@@ -7,10 +7,10 @@ Start with a `docker` directory in `home` and follow the guidelines below.
 
 Each docker container must be placed into their only directory.  
 
-Dockerfiles:  
-Each docker container needs a `Dockerfile` if only to document the intended run commond of for the container.  
+**Dockerfiles:**  
+Each docker container needs a `Dockerfile` if only to document the intended run command of for the container.  
 
-Systemd Units:  
+**Systemd Units:**  
 Each docker container must have a systemd service or unit file.  
 As an example for a service called 'registry' which is a docker image registry:  
 Filename: registry.service  

@@ -6,9 +6,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'rust-lang/rust.vim'
-Plugin 'b4b4r07/vim-hcl'
-Plugin 'fatih/vim-go'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
 

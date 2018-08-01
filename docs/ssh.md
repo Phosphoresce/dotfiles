@@ -31,6 +31,14 @@ Then connect to the other side of the shell from home.
 From home:  
 `ssh -p 2222 localhost`  
 
+**Regular ssh tunnel**  
+This is useful for accessing servers in a private subnet. For example allowing the use of RDP from your local machine because a jumpbox doesn't have RDP.
+
+Create the tunnel:
+`ssh -L 3389:eventual_target:3389 jumpbox_ip`
+
+From your starting machine connect to localhost and the tunnel will forward that connection to the eventual target.  
+
 **Troubleshooting**  
 Make sure the public key and private key are correctly copied over to your target server.  
 Did you run `chmod 400 ~/.ssh/authorized_keys`?  

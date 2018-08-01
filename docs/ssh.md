@@ -34,7 +34,7 @@ From home:
 **Regular ssh tunnel**  
 This is useful for accessing servers in a private subnet. For example allowing the use of RDP from your local machine because a jumpbox doesn't have RDP.
 
-Create the tunnel:
+Create the tunnel:  
 `ssh -L 3389:eventual_target:3389 jumpbox_ip`
 
 From your starting machine connect to localhost and the tunnel will forward that connection to the eventual target.  

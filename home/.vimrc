@@ -18,3 +18,4 @@ filetype plugin indent on
 :set linebreak
 :set breakindent
 :colorscheme meta5
+set pastetoggle=<F2>

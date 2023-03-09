@@ -4,15 +4,19 @@ autoload -Uz compinit
 compinit
 
 autoload -U colors && colors
-
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
 PROMPT="%{$fg[cyan]%} -> %{$reset_color%}"
+
+# History
+HISTFILE=~/.histfile
+HISTSIZE=1000000
+HISTFILESIZE=-1
+SAVEHIST=1000000
 
 setopt appendhistory
 unsetopt beep notify
 
+# Environment
+export WINHOME=/mnt/c/Users/user
 export GOPATH=$HOME/Code/go
 export GOROOT=/usr/local/go
 export GO111MODULE=on
@@ -31,6 +35,7 @@ if [[ -z "$TMUX" ]]; then
 	fi
 fi
 
+# Aliases
 alias kazuma="echo 'はい, かずま です'"
 alias display="~/Scripts/displays.sh"
 alias loicme="~/Scripts/loicme.sh"
@@ -43,11 +48,19 @@ alias hg='cat ~/.histfile | grep'
 alias docker='sudo docker'
 alias yaml2js="python -c 'import sys, yaml, json; json.dump(yaml.load(sys.stdin), sys.stdout, indent=4)'"
 
+# Functions
+dcocker () { docker rm -f $(docker ps -q -a) && docker rmi -f $(docker images -q) && docker volume prune -f }
+ssha () { eval $(ssh-agent) > /dev/null && ssh-add ~/.ssh/id_* 2> /dev/null }
+
+# Use neovim if possible
 if type nvim > /dev/null 2>&1; then
 	alias vim='nvim'
 	export EDITOR=nvim
+	# automatically create ~/.config/nvim -> ~/.vim link if not there?
 fi
-dcocker () { docker rm -f $(docker ps -q -a) && docker rmi -f $(docker images -q) && docker volume prune -f }
-cd $HOME
+
+# Autocompletion and highlighting
 if [ $commands[kubectl]  ]; then source <(kubectl completion zsh); fi
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+cd $HOME
